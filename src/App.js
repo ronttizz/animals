@@ -1,9 +1,12 @@
-import "./App.css";
+import classes from "./App.module.css";
+import AnimalCard from "./UI components/AnimalCard";
 
 function App() {
   return (
-    <div className="App">
-      <h1>This will be the App</h1>
+    <div>
+      <div className={classes.AnimalCardContainer}>
+        <AnimalCard />
+      </div>
     </div>
   );
 }
