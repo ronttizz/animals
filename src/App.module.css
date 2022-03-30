@@ -1,5 +1,8 @@
+body {
+  background-color: rgb(20, 154, 0);
+}
+
 .AnimalCardContainer {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid violet;
 }
