@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgb(0, 0, 0);
+  border: 0px solid rgb(0, 0, 0);
   margin: 1rem;
   border-radius: 7px;
-  max-width: 18rem;
+  max-width: 12rem;
   background-color: white;
   transition-duration: 500ms;
   position: relative;
@@ -24,16 +24,27 @@
 .closeBtn {
   border: none;
   border-radius: 50%;
-  padding: 0.5rem 0.75rem;
-  background-color: red;
+  /* padding: 0.5rem 0.75rem; */
+  background-color: black;
+  color: white;
   position: absolute;
   top: 5px;
   right: 5px;
   box-shadow: 0 0 5px black;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.15;
+  transition-duration: 250ms;
 }
 
 .closeBtn:active {
   box-shadow: inset 0 0 5px black;
+  background-color: grey;
+  color: red;
+}
+
+.closeBtn:hover {
+  opacity: 1;
 }
 
 .animalName {
