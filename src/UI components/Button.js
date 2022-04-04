@@ -1,9 +1,11 @@
 import classes from "./Button.module.css";
 
-function Button() {
+function Button(props) {
   return (
     <div>
-      <button>This is a button</button>
+      <button className={classes.button} onClick={props.click}>
+        Add like
+      </button>
     </div>
   );
 }

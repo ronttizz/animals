@@ -5,23 +5,34 @@
   border: 1px solid rgb(0, 0, 0);
   margin: 1rem;
   border-radius: 7px;
-  max-width: 25vw;
+  max-width: 18rem;
   background-color: white;
   transition-duration: 500ms;
+  position: relative;
 }
 
 .animalCard:hover {
-  transform: scale(104%);
+  transform: scale(102%);
 }
 
 .image {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   width: 100%;
 }
 
+.closeBtn {
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem 0.75rem;
+  background-color: red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 .animalName {
-  margin: 0.5rem;
+  margin: 1.5rem;
 }
 
 .likes {

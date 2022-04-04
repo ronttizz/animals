@@ -2,19 +2,24 @@ import classes from "./AnimalCard.module.css";
 import Button from "./Button";
 
 function AnimalCard(props) {
+  const capitalLetter = props.animalName.charAt(0).toUpperCase();
+  const rest = props.animalName.slice(1);
+  const name = capitalLetter + rest;
   return (
     <div className={classes.animalCard}>
       <img
-        src="https://source.unsplash.com/1600x900/?cat"
-        alt="Cat"
+        src={`https://source.unsplash.com/1600x900/?${props.animalName}`}
+        alt={props.animalName}
         className={classes.image}
       ></img>
-      <h2 className={classes.animalName}>AnimalName</h2>
+      <button className={classes.closeBtn}>X</button>
+      <h2 className={classes.animalName}>{name}</h2>
       <div className={classes.bottom}>
         <p>
-          <span className={classes.likes}>0</span> ❤️
+          ❤️
+          <span className={classes.likes}>{props.animalLikes}</span>
         </p>
-        <Button />
+        <Button click={props.action} />
       </div>
     </div>
   );
