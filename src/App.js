@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import classes from "./App.module.css";
 import AnimalCard from "./UI components/AnimalCard";
 import { animals } from "./animals.js";
+import Button from "./UI components/Button";
 
 class App extends Component {
   state = {
@@ -43,7 +44,13 @@ class App extends Component {
     });
     return (
       <div>
-        <h1>Animals app</h1>
+        <h1 className={classes.header}>Animals app</h1>
+        <div className={classes.searchBar}>
+          <input type="text" className={classes.searchInput}></input>
+          <Button>
+            <p>Search</p>
+          </Button>
+        </div>
         <div className={classes.AnimalCardContainer}>{animalList}</div>
       </div>
     );

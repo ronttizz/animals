@@ -6,6 +6,29 @@ body {
   text-align: center;
 }
 
+.header {
+  margin: 2rem;
+}
+
+.searchBar {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  width: 25rem;
+  justify-content: space-between;
+}
+
+.searchInput {
+  background-color: orange;
+  padding: 0.25rem;
+  border-radius: 5px;
+}
+
 .AnimalCardContainer {
   display: flex;
   flex-wrap: wrap;

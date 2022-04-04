@@ -21,7 +21,9 @@ function AnimalCard(props) {
           ❤️
           <span className={classes.likes}>{props.animalLikes}</span>
         </p>
-        <Button click={props.action} />
+        <Button click={props.action}>
+          <p>Add like</p>
+        </Button>
       </div>
     </div>
   );

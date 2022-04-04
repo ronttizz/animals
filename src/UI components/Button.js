@@ -4,7 +4,7 @@ function Button(props) {
   return (
     <div>
       <button className={classes.button} onClick={props.click}>
-        Add like
+        {props.children}
       </button>
     </div>
   );
