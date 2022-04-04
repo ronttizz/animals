@@ -6,10 +6,28 @@ import { animals } from "./animals.js";
 
 class App extends Component {
   state = {
-    animals,
+    animals: animals,
   };
 
-  addLikeHandler = (name) => {};
+  addLikeHandler = (name) => {
+    this.setState((state) => {
+      const updatedArray = state.animals.map((animal) => {
+        if (animal.name === name) {
+          return { ...animal, likes: animal.likes + 1 };
+        } else {
+          return animal;
+        }
+      });
+      return { animals: updatedArray };
+    });
+  };
+
+  removeHandler = (name) => {
+    const updatedArray = this.state.animals.filter((animal) => animal.name !== name);
+    this.setState({
+      animals: updatedArray,
+    });
+  };
 
   render() {
     const animalList = this.state.animals.map((animal) => {
@@ -19,10 +37,16 @@ class App extends Component {
           animalName={animal.name}
           animalLikes={animal.likes}
           action={() => this.addLikeHandler(animal.name)}
+          remove={() => this.removeHandler(animal.name)}
         />
       );
     });
-    return <div className={classes.AnimalCardContainer}>{animalList}</div>;
+    return (
+      <div>
+        <h1>Animals app</h1>
+        <div className={classes.AnimalCardContainer}>{animalList}</div>
+      </div>
+    );
   }
 }
 

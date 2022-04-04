@@ -12,7 +12,9 @@ function AnimalCard(props) {
         alt={props.animalName}
         className={classes.image}
       ></img>
-      <button className={classes.closeBtn}>X</button>
+      <button className={classes.closeBtn} onClick={props.remove}>
+        X
+      </button>
       <h2 className={classes.animalName}>{name}</h2>
       <div className={classes.bottom}>
         <p>
