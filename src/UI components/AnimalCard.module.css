@@ -6,27 +6,31 @@
   margin: 1rem;
   border-radius: 7px;
   max-width: 12rem;
-  background-color: white;
+  background-color: rgb(14, 114, 1);
   transition-duration: 500ms;
-  position: relative;
 }
 
 .animalCard:hover {
   transform: scale(102%);
 }
 
+.animalCard:hover img {
+  filter: grayscale(0);
+}
+
 .image {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   width: 100%;
+  position: relative;
+  filter: grayscale(100);
 }
 
 .closeBtn {
   border: none;
   border-radius: 50%;
-  /* padding: 0.5rem 0.75rem; */
   background-color: black;
-  color: white;
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 5px;
   right: 5px;

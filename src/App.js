@@ -8,6 +8,7 @@ import Button from "./UI components/Button";
 class App extends Component {
   state = {
     animals: animals,
+    search: "",
   };
 
   addLikeHandler = (name) => {
@@ -30,8 +31,16 @@ class App extends Component {
     });
   };
 
+  searchHandler = (event) => {
+    // console.log(event.target.value);
+    this.setState({ search: event.target.value.toLowerCase() });
+  };
+
   render() {
-    const animalList = this.state.animals.map((animal) => {
+    const animalFilter = this.state.animals.filter((animal) => {
+      return animal.name.toLocaleLowerCase().includes(this.state.search);
+    });
+    const animalList = animalFilter.map((animal) => {
       return (
         <AnimalCard
           key={animal.name}
@@ -44,12 +53,14 @@ class App extends Component {
     });
     return (
       <div>
-        <h1 className={classes.header}>Animals app</h1>
+        <h1 className={classes.header}>{this.state.animals.length} Animals app</h1>
         <div className={classes.searchBar}>
-          <input type="text" className={classes.searchInput}></input>
-          <Button>
-            <p>Search</p>
-          </Button>
+          <input
+            type="text"
+            className={classes.searchInput}
+            id="search"
+            onChange={this.searchHandler}
+          />
         </div>
         <div className={classes.AnimalCardContainer}>{animalList}</div>
       </div>
