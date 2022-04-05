@@ -2,11 +2,11 @@
 
 School project made using React.
 
-When searching app will show animals which has the exact search in the name.
+When searching, app will show animals which has the exact search included in the name.
 
 "Add like" button will add a like to selected animal and shown in the left side.
 
-No localstorage used.
+No localstorage used so the app will reset when page is refreshed.
 
 # IMAGES FROM UNSPLASH.COM
 
