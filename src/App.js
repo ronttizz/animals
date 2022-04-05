@@ -32,7 +32,6 @@ class App extends Component {
   };
 
   searchHandler = (event) => {
-    // console.log(event.target.value);
     this.setState({ search: event.target.value.toLowerCase() });
   };
 
